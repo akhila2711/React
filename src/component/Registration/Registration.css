@@ -21,12 +21,7 @@
 
 
 
-.registration-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555555;
-}
+
 
 .registration-form input {
     width: 100%;

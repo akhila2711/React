@@ -37,7 +37,7 @@ class Registration extends Component {
       <div className="registration-container ">
         <h1>Registration</h1>
         <form onSubmit={this.handleSubmit} className="registration-form">
-          <label className="registration-form label ">
+          <label>
             Name:
             <input
             className="registration-form input "
@@ -48,7 +48,7 @@ class Registration extends Component {
             />
           </label>
           <br />
-          <label className="registration-form label">
+          <label >
             Email:
             <input
               className="registration-form input"
@@ -59,7 +59,7 @@ class Registration extends Component {
             />
           </label>
           <br />
-          <label className="registration-form label">
+          <label>
             Password:
             <input
               className="registration-form input"

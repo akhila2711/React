@@ -7,16 +7,16 @@ class Login extends Component {
   }
   render() {
     return (
-      <>
+      <div className="login-container">
        <h1>Login</h1>
-       <form >
+       <form  className="login-form ">
         <label>Username:</label>
-        <input type="text" required></input>
+        <input className="login-input " type="text" required></input>
         <label>Password:</label>
-        <input type="password" required></input>
-        <button onClick={this.update}>Submit</button>
+        <input  className="login-input "type="password" required></input>
+        <button  className="login-button" onClick={this.update}>Submit</button>
        </form>
-      </>
+      </div>
     )
   }
 }

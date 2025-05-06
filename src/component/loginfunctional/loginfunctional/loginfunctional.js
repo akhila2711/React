@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './loginfunctional.css';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
@@ -12,40 +13,42 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedData((prev) => [...prev, formData]);
-    setFormData({ username: '', password: '' }); // Clear the form
+    setFormData({ username: '', password: '' }); 
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='login-container' style={{ padding: '20px' }}>
       <h2>Login Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form onSubmit={handleSubmit} className='login-form'>
+          
           <label>Username: </label>
           <input
+          className='login-input'
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
+    
+       
           <label>Password: </label>
           <input
+          className='login-input'
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
             required
           />
-        </div>
-        <button type="submit">Submit</button>
+      
+        <button  className='login-button ' type="submit">Submit</button>
       </form>
 
       {submittedData.length > 0 && (
-        <div style={{ marginTop: '20px' }}>
+        <div>
           <h3>Submitted Data</h3>
-          <table border="1" cellPadding="10">
+          <table border="1" cellPadding="10" className='login-table'>
             <thead>
               <tr>
                 <th>Username</th>
